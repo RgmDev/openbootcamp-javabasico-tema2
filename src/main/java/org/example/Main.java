@@ -1,16 +1,17 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        double precio = 20.20;
-        double precioConIVA = addIVA(precio);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce el precio: ");
+        int precio = scanner.nextInt();
+        double precioConIVA = precio + (precio * 0.21);
         System.out.println(precioConIVA);
 
     }
 
-    public static double addIVA(double precio) {
-        return precio + (precio * 0.16);
-    }
 }
 
